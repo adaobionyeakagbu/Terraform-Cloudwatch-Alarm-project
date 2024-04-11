@@ -15,7 +15,7 @@ resource "aws_cloudwatch_metric_alarm" "failed_builds" {
   alarm_actions       = [aws_sns_topic.failed_builds.arn]
   #CodeBuild provides the following CloudWatch metric dimensions. If none of these are specified, the metrics are for the current AWS account.
   dimensions = {
-    #ProjectName = "your_ec2_id_here"
+    #ProjectName #BuildId = "your_projectname_or_buildid_here"
   }
 }
 
